@@ -23,7 +23,7 @@ double findN(double* arr, const int size, double num) // finding an element in p
 {
     double range = rangeArr(arr, size);
     if (range != -1)
-        return arr[0] + rangeArr(arr, size) * (num - 1);
+        return arr[0] + range * (num - 1);
     else
         return -1;
 }
