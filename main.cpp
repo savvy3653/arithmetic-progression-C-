@@ -26,7 +26,7 @@ int main(void) {
         std::istringstream iss(strbuff);
 
         std::string command;
-        double value{0};
+        int value;
 
         iss >> command;
 
@@ -86,21 +86,21 @@ double gpm_func(double* array, int& size)
 
         else if (command == "range")
         {
-            int range = geometric.rangeArr(array, size);
+            double range = geometric.rangeArr(array, size);
             if (range != -1)
                 std::cout << range << std::endl;
         }
 
         else if (command == "find" && iss >> value)
         {
-            int n = geometric.findN(array, size, value);
+            double n = geometric.findN(array, size, value);
             if (n != -1)
                 std::cout << n << std::endl;
         }
 
         else if (command == "sum" && iss >> value)
         {
-            int s = geometric.sumN(array, size, value);
+            double s = geometric.sumN(array, size, value);
             if (s != -1)
                 std::cout << s << std::endl;
         }
@@ -136,7 +136,7 @@ double apm_func(double* array, int& size)
         std::istringstream iss(::strbuff);
 
         std::string command;
-        int value;
+        double value{0};
 
         iss >> command;
 
@@ -158,21 +158,21 @@ double apm_func(double* array, int& size)
 
         else if (command == "range")
         {
-            int range = arithmetic.rangeArr(array, size);
+            double range = arithmetic.rangeArr(array, size);
             if (range != -1)
                 std::cout << range << std::endl;
         }
 
         else if (command == "find" && iss >> value)
         {
-            int n = arithmetic.findN(array, size, value);
+            double n = arithmetic.findN(array, size, value);
             if (n != -1)
                 std::cout << n << std::endl;
         }
 
         else if (command == "sum" && iss >> value)
         {
-            int s = arithmetic.sumN(array, size, value);
+            double s = arithmetic.sumN(array, size, value);
             if (s != -1)
                 std::cout << s << std::endl;
         }
