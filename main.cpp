@@ -26,7 +26,7 @@ int main(void) {
         std::istringstream iss(strbuff);
 
         std::string command;
-        int value;
+        //int value;
 
         iss >> command;
 
@@ -64,7 +64,7 @@ double gpm_func(double* array, int& size)
         std::istringstream iss(::strbuff);
 
         std::string command;
-        double value{0};
+        double value;
 
         iss >> command;
 
@@ -136,7 +136,7 @@ double apm_func(double* array, int& size)
         std::istringstream iss(::strbuff);
 
         std::string command;
-        double value{0};
+        double value;
 
         iss >> command;
 
